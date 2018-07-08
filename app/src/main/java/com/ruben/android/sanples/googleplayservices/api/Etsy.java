@@ -1,7 +1,10 @@
 package com.ruben.android.sanples.googleplayservices.api;
 
+import com.ruben.android.sanples.googleplayservices.model.ActiveListings;
+
 import java.io.IOException;
 
+import retrofit.Callback;
 import retrofit.RequestInterceptor;
 import retrofit.RestAdapter;
 
@@ -26,6 +29,12 @@ public class Etsy {
                 setRequestInterceptor(getInterceptor()).
                 build().
                 create(Api.class);
+
+    }
+
+    public static void getActiveListings(Callback<ActiveListings> callback) {
+
+        getApi().activeListenings("Images,Shop",callback);
 
     }
 
