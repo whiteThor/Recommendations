@@ -3,11 +3,29 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/listing_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+    <com.google.android.gms.plus.PlusOneButton
+        android:id="@+id/listing_plus_one_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignTop="@+id/listing_share_btn"
+        android:layout_toLeftOf="@+id/listing_share_btn"
+        android:layout_toStartOf="@+id/listing_share_btn"
+        />
+     <ImageButton
+         android:id="@+id/listing_share_btn"
+         android:layout_width="48dp"
+         android:layout_height="48dp"
+         android:src="@drawable/ic_social_share"/>
+    </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
