@@ -74,6 +74,8 @@ private TextView mErrorView;
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         mGoogleServiceHelper.handleActitvityResult(requestCode, resultCode, data);
+        if(requestCode == ListingAdapter.REQUEST_CODE_PLUS_ONE )
+            mListingAdapter.notifyDataSetChanged();
     }
 
     public void showLoanding(){
