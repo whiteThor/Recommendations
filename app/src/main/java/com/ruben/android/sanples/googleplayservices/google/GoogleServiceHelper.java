@@ -20,7 +20,7 @@ public class GoogleServiceHelper implements GoogleApiClient.ConnectionCallbacks,
     public static final int REQUEST_CODE_RESOLUTION = -100;
     public static final int REQUEST_CODE_AVAILABILITY = -101;
     public GoogleServiceHelper(MainActivity mainActivity, GoogleServiceListener googleServiceListener) {
-        mainActivity = mainActivity;
+        mActivity = mainActivity;
         mGoogleServiceListener = googleServiceListener;
         mGoogleApiClient = new  GoogleApiClient
                 .Builder(mainActivity)
